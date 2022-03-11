@@ -11,7 +11,7 @@ if __name__ == "__main__":
     player1.name = input("What is your name? ")
     player1.pick_vocation(input("What is your vocation? Mage, Warrior, or Thief? "))
     player1.show_skills()
-    game.intro_room("Bloodied Hallway")
+    game.show_room(0)
     enemy.summon_monster("Agalageli")
     battle.print_stuff()
     battle.turn()
