@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "python-combat"
+version = "0.1.0"
+description = ""
+authors = ["Nick Seldner"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^4.0.1"
+black = "21.12b0"
+
+[tool.black]
+line-length = 120
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
