@@ -1,4 +1,4 @@
-from python_combat.core.characters.character import Character
+from python_combat.characters.character import Character
 
 
 class Enemy(Character):
