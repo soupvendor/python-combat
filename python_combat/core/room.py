@@ -2,6 +2,7 @@ class Room:
     def __init__(self, name, desc):
         self.name = name
         self.desc = desc
+
     def print(self):
         print(self.name)
         print()
@@ -15,14 +16,8 @@ rooms = [
         "\n"
         "Once you break the gaze of the abyss, you glance around your surroundings to find a grusome scene lining the walls."
         "\n"
-        "You notice blood trickling down the wall, indicating that it's fresh. Soon after this realization, something approaches from the dark..."
+        "You notice blood trickling down the wall, indicating that it's fresh. Soon after this realization, something approaches from the dark...",
     ),
-    Room(
-        "Dark Chamber",
-        " "
-    ),
-    Room(
-        "Moon-lit Field",
-        " "
-    )
+    Room("Dark Chamber", " "),
+    Room("Moon-lit Field", " "),
 ]

@@ -1,36 +1,36 @@
 from python_combat.characters.character import Character
 
 
-class Enemy(Character):
+class Enemy():
     def __init__(self):
         super().__init__()
         self.monster_type = None
 
     def show_stats(self):
-        print(self.name, self.maxhealth, self.maxstamina, self.maxattack, self.maxdefense, self.monster_type)
+        print(self.name, self.max_health, self.max_stamina, self.max_attack, self.max_defense, self.monster_type)
 
     def summon_monster(self, monster):
         monsters = ["Walgag", "Bonborito", "Agalageli"]
 
         if monster == monsters[0]:  # Walgag
             self.name = "Walgag"
-            self.maxhealth = 200
-            self.maxstamina = 100
-            self.maxattack = 15
-            self.maxdefense = 30
+            self.max_health = 200
+            self.max_stamina = 100
+            self.max_attack = 15
+            self.max_defense = 30
         if monster == monsters[1]:  # Bonborito
             self.name = "Bonborito"
-            self.maxhealth = 100
-            self.maxstamina = 50
-            self.maxattack = 10
-            self.maxdefense = 50
+            self.max_health = 100
+            self.max_stamina = 50
+            self.max_attack = 10
+            self.max_defense = 50
         if monster == monsters[2]:  # Agalageli
             self.name = "Agalageli"
-            self.maxhealth = 300
-            self.maxstamina = 300
-            self.maxattack = 20
-            self.maxdefense = 0
-        self.health = self.maxhealth
-        self.stamina = self.maxstamina
-        self.attack = self.maxattack
-        self.defense = self.maxdefense
+            self.max_health = 300
+            self.max_stamina = 300
+            self.max_attack = 20
+            self.max_defense = 0
+        self.health = self.max_health
+        self.stamina = self.max_stamina
+        self.attack = self.max_attack
+        self.defense = self.max_defense

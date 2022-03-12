@@ -1,13 +1,18 @@
-from python_combat.characters.character import Character
+from python_combat.core.vocation import Vocation
 
 
-class Player(Character):
-    def character_create(self):
-        self.name = None
-        self.vocation = None
+class Player():
+    
+    def __init__(self, name: str, class_: Vocation) -> None:
+        self.name = name
+        self.class_ = class_
+        self.health = class_.max_health
+        self.stamina = class_.max_stamina
+        self.attack = class_.max_attack
+        self.defense = class_.max_defense
 
     def show_stats(self):
-        print(self.name, self.vocation, self.maxhealth, self.maxstamina, self.maxattack, self.maxdefense)
+        print(self.name, self.vocation, self.max_health, self.max_stamina, self.max_attack, self.max_defense)
 
     def pick_vocation(self, vocation):
         vocation = vocation.lower()
@@ -15,30 +20,30 @@ class Player(Character):
         while vocation not in vocations:
             vocation = input("Choose a valid vocation: Mage, Warrior, or Thief. ")
         if vocation == vocations[0]:  # Mage
-            self.maxhealth = 75
-            self.maxstamina = 75
-            self.maxattack  # 25 default
-            self.maxdefense = 35
+            self.max_health = 75
+            self.max_stamina = 75
+            self.max_attack  # 25 default
+            self.max_defense = 35
             self.vocation = "Mage"
             self.skills = ["Ember Beam", "Arcane Shield", "Brittle Armor", "Soul for a Soul"]
         elif vocation == vocations[1]:  # Warrior
-            self.maxhealth = 150
-            self.maxstamina = 75
-            self.maxattack = 35
-            self.maxdefense = 15
+            self.max_health = 150
+            self.max_stamina = 75
+            self.max_attack = 35
+            self.max_defense = 15
             self.vocation = "Warrior"
             self.skills = ["Bloodlust", "Immortal Stand", "Cripple Armor", "Decapitate"]
         elif vocation == vocations[2]:  # Thief
-            self.maxhealth = 80
-            self.maxstamina = 100
-            self.maxattack = 45
-            self.maxdefense = 5
+            self.max_health = 80
+            self.max_stamina = 100
+            self.max_attack = 45
+            self.max_defense = 5
             self.vocation = "Thief"
             self.skills = ["Hidden Blade", "Display of Powder", "Immobilizing Slash", "Blanket of Blades"]
-        self.health = self.maxhealth
-        self.stamina = self.maxstamina
-        self.attack = self.maxattack
-        self.defense = self.maxdefense
+        self.health = self.max_health
+        self.stamina = self.max_stamina
+        self.attack = self.max_attack
+        self.defense = self.max_defense
 
     def show_skills(self):
         skill_desc = {
