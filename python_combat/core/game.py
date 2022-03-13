@@ -1,4 +1,4 @@
-from python_combat.core.rooms import rooms
+from python_combat.core.room import rooms
 
 
 class Game:

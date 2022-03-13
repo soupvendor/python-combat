@@ -1,7 +1,4 @@
-from python_combat.characters.character import Character
-
-
-class Enemy():
+class Enemy:
     def __init__(self):
         super().__init__()
         self.monster_type = None

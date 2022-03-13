@@ -2,16 +2,23 @@ from python_combat.core.game import Game
 from python_combat.characters.player import Player
 from python_combat.characters.enemy import Enemy
 from python_combat.core.battle import Battle
+from python_combat.core.vocation import vocations, Vocation
+
+
+def pick_vocation() -> Vocation:
+    vocation = None
+    vocation_names = [v.name.lower() for v in vocations]
+
+    while vocation not in vocation_names:
+        vocation = input("Please choose Warrior, Rogue, or Mage. ")
+        vocation = vocation.lower()
+    for voc in vocations:
+        if vocation == voc.name.lower():
+            return voc
+
 
 if __name__ == "__main__":
     game = Game()
-    player1 = Player()
-    enemy = Enemy()
-    battle = Battle(player1, enemy)
-    player1.name = input("What is your name? ")
-    player1.pick_vocation(input("What is your vocation? Mage, Warrior, or Thief? "))
-    player1.show_skills()
-    game.show_room(0)
-    enemy.summon_monster("Agalageli")
-    battle.print_stuff()
-    battle.turn()
+    vocation = pick_vocation()
+    player1 = Player("tory", vocation)
+    print(player1)
