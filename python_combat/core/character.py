@@ -2,7 +2,7 @@ from python_combat.core.vocation import Vocation
 import textwrap
 
 
-class Player:
+class Character:
     def __init__(self, name: str, vocation: Vocation) -> None:
         self.name = name
         self.vocation = vocation

@@ -1,6 +1,5 @@
 from python_combat.core.game import Game
-from python_combat.characters.player import Player
-from python_combat.characters.enemy import Enemy
+from python_combat.core.character import Character
 from python_combat.core.battle import Battle
 from python_combat.core.vocation import vocations, Vocation
 
@@ -20,5 +19,5 @@ def pick_vocation() -> Vocation:
 if __name__ == "__main__":
     game = Game()
     vocation = pick_vocation()
-    player1 = Player("tory", vocation)
+    player1 = Character("tory", vocation)
     print(player1)
